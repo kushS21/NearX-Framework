@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A5C8E61F23EA7CD900668EC1 /* NearX.h in Headers */ = {isa = PBXBuildFile; fileRef = A5C8E61D23EA7CD900668EC1 /* NearX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5C8E62623EA7D7800668EC1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C8E62523EA7D7800668EC1 /* Service.swift */; };
+		A5C8E62823EA86E200668EC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C8E62723EA86E200668EC1 /* Constants.swift */; };
+		A5C8E62A23EA86F300668EC1 /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C8E62923EA86F300668EC1 /* Geofence.swift */; };
+		A5C8E62C23EA870A00668EC1 /* GeofenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C8E62B23EA870A00668EC1 /* GeofenceUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +19,9 @@
 		A5C8E61D23EA7CD900668EC1 /* NearX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearX.h; sourceTree = "<group>"; };
 		A5C8E61E23EA7CD900668EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5C8E62523EA7D7800668EC1 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A5C8E62723EA86E200668EC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A5C8E62923EA86F300668EC1 /* Geofence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
+		A5C8E62B23EA870A00668EC1 /* GeofenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 				A5C8E61D23EA7CD900668EC1 /* NearX.h */,
 				A5C8E61E23EA7CD900668EC1 /* Info.plist */,
 				A5C8E62523EA7D7800668EC1 /* Service.swift */,
+				A5C8E62723EA86E200668EC1 /* Constants.swift */,
+				A5C8E62923EA86F300668EC1 /* Geofence.swift */,
+				A5C8E62B23EA870A00668EC1 /* GeofenceUtils.swift */,
 			);
 			path = NearX;
 			sourceTree = "<group>";
@@ -134,7 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C8E62A23EA86F300668EC1 /* Geofence.swift in Sources */,
 				A5C8E62623EA7D7800668EC1 /* Service.swift in Sources */,
+				A5C8E62823EA86E200668EC1 /* Constants.swift in Sources */,
+				A5C8E62C23EA870A00668EC1 /* GeofenceUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +288,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NearX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +316,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NearX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
