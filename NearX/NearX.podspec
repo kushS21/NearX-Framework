@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.license      = "MIT"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
   # ―――  Spec Author  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
@@ -101,8 +101,8 @@ Pod::Spec.new do |spec|
 
   spec.frameworks = 'UIKit', 'CoreLocation'
   spec.dependency 'Alamofire'
-  spec.dependency 'AlamofireObjectMapper'
-  spec.dependency 'ObjectMapper'
+  #spec.dependency 'AlamofireObjectMapper'
+  #spec.dependency 'ObjectMapper'
   spec.dependency 'SwiftyJSON'
 
 
