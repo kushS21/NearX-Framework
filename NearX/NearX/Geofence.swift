@@ -45,29 +45,46 @@ public class Geofence:NSObject,CLLocationManagerDelegate{
                         "longitude": longitude]
         
         let authKey = UserDefaults.standard.string(forKey: Constants.PreferencesKeys.AUTH_KEY)!
-        let headers = [
+        let headers : HTTPHeaders = [
             "Content-Type": "application/json",
             "token": authKey
         ]
-        let getgeofenceURL = Constants.GEOFENCE_URL +  "latitude=\(location["latitude"]!)&longitude=\(location["longitude"]!)&within=1000000&limit=20"
-        Alamofire.request(getgeofenceURL, method:.get,
-                          headers:headers)
+        
+        let getgeofenceURL = Constants.GEOFENCE_URL +
+            "latitude=\(location["latitude"]!)&longitude=\(location["longitude"]!)&within=1000000&limit=20"
+        
+        AF.request(getgeofenceURL, method: .get, headers:headers)
             .validate()
 //            .debugLog()
+            
             .responseJSON { response in
-                print(response)
-                guard response.result.isSuccess else {
-                    print(response)
-                    print("Error while receiving data")
-                    return
+                switch response.result
+                {
+                    case .success(let value):
+                        let jsonResponse = JSON(value)
+                        self.onCompleteGetGeofences(value: jsonResponse)
+                    case .failure(let error):
+                        print(error)
                 }
+//                print(response)
+//                guard response.result.isSuccess else {
+//                    print(response)
+//                    print("Error while receiving data")
+//                    return
+//                }
                 
-                let value = response.result.value
-                let jsonResponse = JSON(value!)
-                self.onCompleteGetGeofences(value: jsonResponse)
+//                let value = response.result.value
+//                let jsonResponse = JSON(value!)
+//                self.onCompleteGetGeofences(value: jsonResponse)
                 
                 
         }
+        
+
+//        AF.request("\(url)\(path)").responseData {
+//            response in switch response.result { case .success(let value): print(String(data: value, encoding: .utf8)!) completion(try? SomeRequest(protobuf: value)) case .failure(let error): print(error) completion(nil) }
+//
+//        }
     }
     
     func onCompleteGetGeofences(value:JSON){

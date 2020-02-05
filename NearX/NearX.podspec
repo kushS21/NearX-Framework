@@ -36,7 +36,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.platform     = :ios, "11.0"
-  spec.swift_versions = "4.2"
+  spec.swift_versions = "5.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -100,10 +100,10 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
 
   spec.frameworks = 'UIKit', 'CoreLocation'
-  spec.dependency 'Alamofire' , '4.7.2'
-  spec.dependency 'AlamofireObjectMapper' , '5.0'
-  spec.dependency 'ObjectMapper' ,'3.1'
-  spec.dependency 'SwiftyJSON', '~> 4.2.0'
+  spec.dependency 'Alamofire'
+  spec.dependency 'AlamofireObjectMapper'
+  spec.dependency 'ObjectMapper'
+  spec.dependency 'SwiftyJSON'
 
 
 end

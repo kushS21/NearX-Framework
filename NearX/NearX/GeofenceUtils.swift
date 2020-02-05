@@ -33,7 +33,7 @@ public class GeofenceUtils{
     public static func sendGeofenceEvent(eventType:String,locationName:String){
         print("sendGeofenceEvent")
         let authKey = UserDefaults.standard.string(forKey: Constants.PreferencesKeys.AUTH_KEY)!
-        let headers = [
+        let headers : HTTPHeaders = [
             "Content-Type": "application/json",
             "token":authKey
         ]
@@ -47,19 +47,19 @@ public class GeofenceUtils{
         let data = [
             "authKey":authKey,
             "eventData": eventData
-            ] as [String : Any]
+            ] as! [String : String]
         
-        Alamofire.request(Constants.EVENT_URL, method: .post,
-                          parameters:data, headers:headers)
+        AF.request(Constants.EVENT_URL,method: .post,parameters:data,encoder: JSONParameterEncoder.default, headers:headers)
             .validate()
 //            .debugLog()
             .responseJSON { response in
                 print(response)
-                guard response.result.isSuccess else {
-                    print(response)
-                    print("Error while receiving data")
-                    return
-                }
+//                let result = response
+//                guard result.isSuccess else {
+//                    print(response)
+//                    print("Error while receiving data")
+//                    return
+//                }
         }
     }
     

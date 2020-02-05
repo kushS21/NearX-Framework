@@ -1,16 +1,18 @@
 PODS:
-  - Alamofire (4.7.2)
-  - AlamofireObjectMapper (5.0.0):
-    - Alamofire (~> 4.1)
-    - ObjectMapper (~> 3.0)
-  - ObjectMapper (3.3.0)
-  - SwiftyJSON (4.2.0)
+  - Alamofire (5.0.0-rc.2)
+  - AlamofireObjectMapper (6.2.0):
+    - Alamofire (= 5.0.0-rc.2)
+    - ObjectMapper (~> 3.5.1)
+  - ObjectMapper (3.5.1)
+  - SwiftyJSON (5.0.0)
+  - Validator (3.2.1)
 
 DEPENDENCIES:
-  - Alamofire (= 4.7.2)
-  - AlamofireObjectMapper (= 5.0)
-  - ObjectMapper (= 3.3)
-  - SwiftyJSON (~> 4.2.0)
+  - Alamofire (= 5.0.0-rc.2)
+  - AlamofireObjectMapper
+  - ObjectMapper
+  - SwiftyJSON
+  - Validator
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - ObjectMapper
     - SwiftyJSON
+    - Validator
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  AlamofireObjectMapper: 74d1440c92c42bbcc2b5f4dc81654ac095ec669f
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: c8838867ffade3808375382623893f2e01c9fa90
+PODFILE CHECKSUM: 62b0c366a19729a45964c9f527fc15227684a9c4
 
 COCOAPODS: 1.8.4
