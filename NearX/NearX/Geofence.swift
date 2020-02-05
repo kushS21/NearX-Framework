@@ -53,7 +53,7 @@ public class Geofence:NSObject,CLLocationManagerDelegate{
         Alamofire.request(getgeofenceURL, method:.get,
                           headers:headers)
             .validate()
-            .debugLog()
+//            .debugLog()
             .responseJSON { response in
                 print(response)
                 guard response.result.isSuccess else {

@@ -42,16 +42,17 @@ public class GeofenceUtils{
         let eventData = [
             "eventType":eventType,
             "locationNames":[locationName],
-            "mobileNumber":mobileNumber,
+            "mobileNumber":mobileNumber
             ] as [String: Any]
         let data = [
             "authKey":authKey,
             "eventData": eventData
             ] as [String : Any]
-        Alamofire.request(Constants.EVENT_URL, method:.post,
-                          parameters:data,encoding:JSONEncoding.default, headers:headers)
+        
+        Alamofire.request(Constants.EVENT_URL, method: .post,
+                          parameters:data, headers:headers)
             .validate()
-            .debugLog()
+//            .debugLog()
             .responseJSON { response in
                 print(response)
                 guard response.result.isSuccess else {
