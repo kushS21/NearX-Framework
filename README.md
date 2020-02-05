@@ -1,0 +1,2 @@
+# NearX-Framework
+Geolocation service
