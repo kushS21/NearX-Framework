@@ -7,6 +7,6 @@ target 'Demo' do
 
   # Pods for Demo
   
-  # pod "NearX" , :path => "../NearX"
+  pod "NearX" , :path => "../NearX"
 
 end

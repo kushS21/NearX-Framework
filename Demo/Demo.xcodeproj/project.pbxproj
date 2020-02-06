@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7569F0A04C512EEA4D18DBAD /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09390D89298B0B699F95B7E5 /* Pods_Demo.framework */; };
 		A5CC31FC23EB05050031FF9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC31FB23EB05050031FF9B /* AppDelegate.swift */; };
 		A5CC31FE23EB05050031FF9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC31FD23EB05050031FF9B /* SceneDelegate.swift */; };
 		A5CC320023EB05050031FF9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC31FF23EB05050031FF9B /* ViewController.swift */; };
 		A5CC320323EB05050031FF9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CC320123EB05050031FF9B /* Main.storyboard */; };
 		A5CC320523EB05060031FF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CC320423EB05060031FF9B /* Assets.xcassets */; };
 		A5CC320823EB05060031FF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CC320623EB05060031FF9B /* LaunchScreen.storyboard */; };
+		BF175925580C3FECE9A806CD /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 697AC9B1BEABC3F49468ECC5 /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09390D89298B0B699F95B7E5 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		697AC9B1BEABC3F49468ECC5 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3956ED7069499957C39961 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		A13B8C2E27D61FD343A8C729 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A5CC31F823EB05050031FF9B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7569F0A04C512EEA4D18DBAD /* Pods_Demo.framework in Frameworks */,
+				BF175925580C3FECE9A806CD /* libPods-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +45,7 @@
 		492133EAF43CA7564C888D6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				09390D89298B0B699F95B7E5 /* Pods_Demo.framework */,
+				697AC9B1BEABC3F49468ECC5 /* libPods-Demo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -56,7 +56,6 @@
 				A13B8C2E27D61FD343A8C729 /* Pods-Demo.debug.xcconfig */,
 				7F3956ED7069499957C39961 /* Pods-Demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,7 +254,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -314,7 +313,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

@@ -1,3 +1,27 @@
-PODFILE CHECKSUM: fdca6795f5c1080be9cdebfc1712a4fcb36cc22f
+PODS:
+  - Alamofire (5.0.0-rc.2)
+  - NearX (1.0.0):
+    - Alamofire (= 5.0.0-rc.2)
+    - SwiftyJSON
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - NearX (from `../NearX`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  NearX:
+    :path: "../NearX"
+
+SPEC CHECKSUMS:
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  NearX: c9bbce25b0bedece938b3350e5111855723de10f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 1c892b6976fc50e0836014eeae227d33133eba28
 
 COCOAPODS: 1.8.4
