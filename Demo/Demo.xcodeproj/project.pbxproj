@@ -13,6 +13,7 @@
 		A5CC320323EB05050031FF9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CC320123EB05050031FF9B /* Main.storyboard */; };
 		A5CC320523EB05060031FF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CC320423EB05060031FF9B /* Assets.xcassets */; };
 		A5CC320823EB05060031FF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CC320623EB05060031FF9B /* LaunchScreen.storyboard */; };
+		A5FECF4E23EC0E640076B5A6 /* ic_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FECF4D23EC0E640076B5A6 /* ic_logo.png */; };
 		BF175925580C3FECE9A806CD /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 697AC9B1BEABC3F49468ECC5 /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		A5CC320423EB05060031FF9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5CC320723EB05060031FF9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5CC320923EB05060031FF9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5FECF4D23EC0E640076B5A6 /* ic_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_logo.png; path = Assets.xcassets/ic_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				A5CC31FF23EB05050031FF9B /* ViewController.swift */,
 				A5CC320123EB05050031FF9B /* Main.storyboard */,
 				A5CC320423EB05060031FF9B /* Assets.xcassets */,
+				A5FECF4D23EC0E640076B5A6 /* ic_logo.png */,
 				A5CC320623EB05060031FF9B /* LaunchScreen.storyboard */,
 				A5CC320923EB05060031FF9B /* Info.plist */,
 			);
@@ -152,6 +155,7 @@
 			files = (
 				A5CC320823EB05060031FF9B /* LaunchScreen.storyboard in Resources */,
 				A5CC320523EB05060031FF9B /* Assets.xcassets in Resources */,
+				A5FECF4E23EC0E640076B5A6 /* ic_logo.png in Resources */,
 				A5CC320323EB05050031FF9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

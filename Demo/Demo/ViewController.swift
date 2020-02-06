@@ -15,27 +15,60 @@ class ViewController: UIViewController {
     
     // Provide your auth key
     let AUTH_KEY = "";
-
+    
+    
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var userMobile: UITextField!
+    @IBOutlet weak var userKey: UITextView!
+    @IBOutlet weak var submitBrn: UIButton!
+    
+    @IBAction func onUserSubmit(_ sender: Any) {
+        
+        print("UserName : ",userName.text!)
+        print("Mobile Number : ",userMobile.text!)
+        print("Api Key : ",userKey.text! )
+        
+        if((userName.text!).isEmpty)
+        {
+            showAlert(withTitle: "Error", message: "Please provide your name!")
+            return
+        }
+        if((userMobile.text!).isEmpty)
+        {
+            showAlert(withTitle: "Error", message: "Please provide mobile number!")
+            return
+        }
+        if((userKey.text!).isEmpty)
+        {
+            showAlert(withTitle: "Error", message: "Please provide your api key!")
+            return
+        }
+        
+        startTracking(user: userName.text!, number: userMobile.text!, apiKey: userKey.text!)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        // Calls a simple function to initialize and track user.
-        
-        startTracking()
+        print("Demo App ready!")
     }
     
-    func startTracking()
+    func startTracking(user : String , number : String , apiKey : String)
     {
-        let token = UserDefaults.standard.string(forKey: "FCM_TOKEN")!
-        
-        GeofenceUtils.setName(name: "Walkin User")
-        GeofenceUtils.setMobileNumber(mobileNumber: "9090909090")
-        GeofenceUtils.setFCMToken(fcmToken: token)
-        GeofenceUtils.setAuthKey(authKey: AUTH_KEY)
+        GeofenceUtils.setName(name: user)
+        GeofenceUtils.setMobileNumber(mobileNumber: number)
+//        GeofenceUtils.setFCMToken(fcmToken: token)
+        GeofenceUtils.setAuthKey(authKey: apiKey)
         
         geofence.initializeGeofences()
+        showAlert(withTitle: "Success!", message: "Geofences monitoring initiated")
+    }
+    
+    func showAlert(withTitle title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 
 
